@@ -1,0 +1,16 @@
+body {
+    background: black;
+    display: flex;
+    flex-direction: column; /* 确保子元素垂直排列 */
+    height: 100%; /* 确保body占满整个视口高度 */
+    margin: 0; /* 移除默认的body边距 */
+    background-image: url("/static/image/index/Fondo de textura de papel reciclado natural _ Foto Premium.jpeg"); /* 设置背景壁纸 */
+    background-size: cover; /* 确保背景图片覆盖整个屏幕 */
+    background-repeat: no-repeat; /* 防止背景图片重复 */
+    background-position: center; /* 将背景图片居中 */
+}
+
+/* 在CSS文件中设置全局默认字体 */
+html {
+    font-family: 'Courier New', Courier, monospace;
+}

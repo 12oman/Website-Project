@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xiangyuasha Silk</title>
+    <link href="static/css/main/main.css" rel="stylesheet" type="text/css">
+    <link href="static/css/main/title.css" rel="stylesheet" type="text/css">
+    <link href="https://img.icons8.com/?size=100&id=heVY0flDr9wP&format=png&color=000000" rel="icon" type="image/x-icon" />
+    <style>
+        .box2 {
+            height: 60vh;
+            width: 90%;
+            margin-top: 5vh;
+            display: flex;
+            position: relative;
+            font-family: sans-serif;
+            font-size: large;
+            color: rgb(82, 46, 8); /* 加上分号 */
+        }
+        .text-box1 {
+            height: 40vh;
+            width: 85vh;
+            margin-left: 20vh;
+            display: flex; /* 使用Flexbox布局 */
+            align-items: flex-start; /* 子元素在水平方向上左对齐 */
+            justify-content: flex-start; /* 子元素在垂直方向上顶部对齐 */
+            color: rgb(82, 46, 8);
+            font-size: large;
+            flex-direction: column; /* 设置子元素垂直排列 */
+            font-family: 'Courier New', Courier, monospace;
+            .Introduce—text {
+                text-align: justify;
+                text-justify: inter-word;
+
+            }
+
+        }
+        #imageContainer {
+            position: relative;
+            height: 60vh;
+            width: 130vh;
+            margin-left: 8vh;
+            overflow: hidden;
+            margin-top: 5vh;
+
+        }
+        .myImage {
+            position: absolute;
+            width: 100%;
+            height: 90%;
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="title_text">
+
+    <div class="navigationBar">
+            <h1>Xiangyuasha Silk</h1>
+
+            <nav class="backgroud-colour">
+                <a href="index.html" >Home</a>
+                <a href="Production.html">Production</a>
+                <a href="Gallery.html">Gallery</a>
+                <a href="History.html">More</a>
+            </nav>
+    </div>
+
+    <h1 class="little_title">
+        Home
+    </h1>
+    </div>
+</div>
+<div class="box2">
+    <div id="imageContainer" onclick="changeImage(event)"></div>
+
+    <div class="text-box1">
+        <h1>Introduce</h1>
+        <p class="Introduce—text">
+            Xiangyun Sha, or "Fragrant Cloud Silk," is a traditional Chinese silk fabric renowned for its 
+            smooth texture, softness, and unique luster. Its production involves several intricate steps: 
+            selecting high-quality mulberry silk, soaking it in natural plant extracts, sun-drying, dyeing 
+            with natural plant dyes, polishing with river stones, steaming, washing, and finally air-drying 
+            and shaping. This process ensures the fabric's exceptional quality, characterized by even, 
+            long-lasting colors and a unique sheen. Xiangyun Sha is breathable, environmentally friendly, 
+            and highly durable, making it a luxurious and culturally significant textile that continues to 
+            be valued in modern fashion.
+        </p>
+    </div>
+</div>
+
+<script>
+    var images = [
+        "static/image/index/滚动列表图片/WechatIMG15.jpg",
+        "static/image/index/滚动列表图片/fabric1.jpg",
+        "static/image/index/滚动列表图片/WechatIMG22.jpg"
+    ];
+    var imageIndex = 0;
+    var vh = window.innerHeight * 0.01;
+
+    // 初始化图片
+    for (var i = 0; i < images.length; i++) {
+        var imgElement = document.createElement("img");
+        imgElement.src = images[i];
+        imgElement.className = "myImage";
+        imgElement.style.left = i * 95 * vh + 'px';
+        document.getElementById("imageContainer").appendChild(imgElement);
+    }
+
+    function changeImage(event) {
+        var x = event.clientX - event.target.offsetLeft;
+        var imgElements = document.getElementsByClassName("myImage");
+        if (x < imgElements[0].width / 2) {
+            // 点击图片左边
+            imageIndex--;
+            if (imageIndex < 0) {
+                imageIndex = images.length - 1;
+            }
+        } else {
+            // 点击图片右边
+            imageIndex++;
+            if (imageIndex >= images.length) {
+                imageIndex = 0;
+            }
+        }
+        for (var i = 0; i < imgElements.length; i++) {
+            imgElements[i].style.left = (i - imageIndex) * 95 * vh + 'px';
+        }
+    }
+</script>
+</body>
+</html>
