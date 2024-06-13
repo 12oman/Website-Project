@@ -1,7 +1,7 @@
 .box1 {
     height: 70vh;
     width: 100%;
-    background-image: url("/static/image/Gallery/clothes11.jpg");
+    background-image: url("/static/image/Gallery/clothes11.png");
     background-size: cover;
     justify-content: center;
     align-items: center;
