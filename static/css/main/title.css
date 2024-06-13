@@ -1,0 +1,83 @@
+.box1 {
+    height: 70vh;
+    width: 100%;
+    background-image: url("/static/image/Gallery/clothes11.jpg");
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: rgb(82, 46, 8);
+    font-size: medium;
+    .title_text{
+        margin-top: -20px;
+        width: 100%;
+
+
+        .navigationBar {
+            height: 10vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 48vh;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: x-large;
+            color: aliceblue;
+            .backgroud-colour{
+                height: 100%;
+                width: 100%;
+                background-color: black;
+                text-align: center;
+                font-size: 36px;
+            }
+
+        }
+
+
+        .little_title {
+            height: 8vh; /* 设置盒子的高度 */
+            width: 100%; /* 设置盒子的宽度 */
+            display: flex; /* 使用Flexbox布局 */
+            justify-content: center; /* 水平居中 */
+            align-items: flex-end; /* 垂直居中并位于底部 */
+            text-align: center; /* 文本水平居中 */
+            color: white;
+            font-size: 36px;
+            margin-top: 30px;
+
+        }
+
+
+    }
+
+}
+
+
+
+
+
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    color: white; /* 设置导航链接的颜色 */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+
+
+
+
+
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* 添加半透明的白色背景 */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 添加白色发光效果 */
+}
+
+
+
+
+
